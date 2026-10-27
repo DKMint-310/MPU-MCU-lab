@@ -1,0 +1,111 @@
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : main.h
+  * @brief          : Header for main.c file.
+  *                   This file contains the common defines of the application.
+  ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; Copyright (c) 2026 STMicroelectronics.
+  * All rights reserved.</center></h2>
+  *
+  * This software component is licensed by ST under BSD 3-Clause license,
+  * the "License"; You may not use this file except in compliance with the
+  * License. You may obtain a copy of the License at:
+  *                        opensource.org/licenses/BSD-3-Clause
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __MAIN_H
+#define __MAIN_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* Includes ------------------------------------------------------------------*/
+#include "stm32f1xx_hal.h"
+
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
+
+/* USER CODE END Includes */
+
+/* Exported types ------------------------------------------------------------*/
+/* USER CODE BEGIN ET */
+
+/* USER CODE END ET */
+
+/* Exported constants --------------------------------------------------------*/
+/* USER CODE BEGIN EC */
+
+/* USER CODE END EC */
+
+/* Exported macro ------------------------------------------------------------*/
+/* USER CODE BEGIN EM */
+
+/* USER CODE END EM */
+
+/* Exported functions prototypes ---------------------------------------------*/
+void Error_Handler(void);
+
+/* USER CODE BEGIN EFP */
+
+/* USER CODE END EFP */
+
+/* Private defines -----------------------------------------------------------*/
+#define RED_Op_Pin GPIO_PIN_1
+#define RED_Op_GPIO_Port GPIOA
+#define YELLOW_Op_Pin GPIO_PIN_2
+#define YELLOW_Op_GPIO_Port GPIOA
+#define GREEN_Op_Pin GPIO_PIN_3
+#define GREEN_Op_GPIO_Port GPIOA
+#define RED_Pin GPIO_PIN_5
+#define RED_GPIO_Port GPIOA
+#define YELLOW_Pin GPIO_PIN_6
+#define YELLOW_GPIO_Port GPIOA
+#define GREEN_Pin GPIO_PIN_7
+#define GREEN_GPIO_Port GPIOA
+#define leda_Pin GPIO_PIN_0
+#define leda_GPIO_Port GPIOB
+#define ledb_Pin GPIO_PIN_1
+#define ledb_GPIO_Port GPIOB
+#define ledc_Pin GPIO_PIN_2
+#define ledc_GPIO_Port GPIOB
+#define en2_Pin GPIO_PIN_10
+#define en2_GPIO_Port GPIOB
+#define en3_Pin GPIO_PIN_11
+#define en3_GPIO_Port GPIOB
+#define btn_mode_Pin GPIO_PIN_8
+#define btn_mode_GPIO_Port GPIOA
+#define btn_inc_Pin GPIO_PIN_9
+#define btn_inc_GPIO_Port GPIOA
+#define btn_set_Pin GPIO_PIN_10
+#define btn_set_GPIO_Port GPIOA
+#define ledd_Pin GPIO_PIN_3
+#define ledd_GPIO_Port GPIOB
+#define lede_Pin GPIO_PIN_4
+#define lede_GPIO_Port GPIOB
+#define ledf_Pin GPIO_PIN_5
+#define ledf_GPIO_Port GPIOB
+#define ledg_Pin GPIO_PIN_6
+#define ledg_GPIO_Port GPIOB
+#define en0_Pin GPIO_PIN_8
+#define en0_GPIO_Port GPIOB
+#define en1_Pin GPIO_PIN_9
+#define en1_GPIO_Port GPIOB
+/* USER CODE BEGIN Private defines */
+
+/* USER CODE END Private defines */
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __MAIN_H */
+
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

@@ -1,0 +1,4 @@
+software_timer.c:13:6:timerInit	32	static,ignoring_inline_asm
+software_timer.c:27:6:setTimer	40	static,ignoring_inline_asm
+software_timer.c:55:6:setTimer2	40	static,ignoring_inline_asm
+software_timer.c:83:6:timerRun	20	static

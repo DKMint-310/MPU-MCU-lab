@@ -1,0 +1,8 @@
+output_display.c:13:6:disable7SEG	8	static
+output_display.c:20:6:display7SEG	24	static
+output_display.c:30:6:scan7SEG	16	static
+output_display.c:58:13:allTrafficOff	8	static
+output_display.c:64:13:showTrafficState	8	static
+output_display.c:83:13:startNormal	8	static
+output_display.c:104:13:runNormal	24	static
+output_display.c:153:6:displayMode	16	static

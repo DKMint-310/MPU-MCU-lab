@@ -64,8 +64,8 @@ all: main-build
 main-build: Led.elf secondary-outputs
 
 # Tool invocations
-Led.elf: $(OBJS) $(USER_OBJS) E:\MPU-MCU\lab\ 1\STM32F103C6UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Led.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"E:\MPU-MCU\lab 1\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Led.elf: $(OBJS) $(USER_OBJS) E:\MPU-MCU\lab\lab\ 1\STM32F103C6UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Led.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"E:\MPU-MCU\lab\lab 1\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
