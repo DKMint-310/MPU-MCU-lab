@@ -33,7 +33,7 @@ void scan7SEG(void)
   static int index = 0;
   uint32_t now = HAL_GetTick();
 
-  if ((uint32_t)(now - last_scan) < 2) return;
+  if ((uint32_t)(now - last_scan) < 4) return;
   last_scan = now;
 
   disable7SEG();
@@ -104,7 +104,7 @@ static void startNormal(void)
 static void runNormal(void)
 {
   if (timing_error) {
-    for (int i = 0; i < 4; i++) led_buffer[i] = 10; // EE EE
+    for (int i = 0; i < 4; i++) led_buffer[i] = 10;
     return;
   }
 

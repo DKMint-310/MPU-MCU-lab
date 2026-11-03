@@ -576,7 +576,6 @@ void fsm_for_input_processing(void)
  8000592:	bf00      	nop
     }
 
-    // Changing mode cancels repetition until the increase button is released.
     if (mode != previous_mode) {
  8000594:	4b64      	ldr	r3, [pc, #400]	; (8000728 <fsm_for_input_processing+0x258>)
  8000596:	681b      	ldr	r3, [r3, #0]
@@ -1819,12 +1818,12 @@ void scan7SEG(void)
  8000d3a:	f000 fcbd 	bl	80016b8 <HAL_GetTick>
  8000d3e:	6078      	str	r0, [r7, #4]
 
-  if ((uint32_t)(now - last_scan) < 2) return;
+  if ((uint32_t)(now - last_scan) < 4) return;
  8000d40:	4b27      	ldr	r3, [pc, #156]	; (8000de0 <scan7SEG+0xac>)
  8000d42:	681b      	ldr	r3, [r3, #0]
  8000d44:	687a      	ldr	r2, [r7, #4]
  8000d46:	1ad3      	subs	r3, r2, r3
- 8000d48:	2b01      	cmp	r3, #1
+ 8000d48:	2b03      	cmp	r3, #3
  8000d4a:	d944      	bls.n	8000dd6 <scan7SEG+0xa2>
   last_scan = now;
  8000d4c:	4a24      	ldr	r2, [pc, #144]	; (8000de0 <scan7SEG+0xac>)
@@ -1892,7 +1891,7 @@ void scan7SEG(void)
  8000dd0:	2200      	movs	r2, #0
  8000dd2:	601a      	str	r2, [r3, #0]
  8000dd4:	e000      	b.n	8000dd8 <scan7SEG+0xa4>
-  if ((uint32_t)(now - last_scan) < 2) return;
+  if ((uint32_t)(now - last_scan) < 4) return;
  8000dd6:	bf00      	nop
 }
  8000dd8:	3708      	adds	r7, #8
@@ -2120,7 +2119,7 @@ static void runNormal(void)
  8000f4c:	681b      	ldr	r3, [r3, #0]
  8000f4e:	2b00      	cmp	r3, #0
  8000f50:	d00e      	beq.n	8000f70 <runNormal+0x2c>
-    for (int i = 0; i < 4; i++) led_buffer[i] = 10; // EE EE
+    for (int i = 0; i < 4; i++) led_buffer[i] = 10;
  8000f52:	2300      	movs	r3, #0
  8000f54:	60fb      	str	r3, [r7, #12]
  8000f56:	e007      	b.n	8000f68 <runNormal+0x24>

@@ -71,7 +71,6 @@ void fsm_for_input_processing(void)
         break;
     }
 
-    // Changing mode cancels repetition until the increase button is released.
     if (mode != previous_mode) {
         repeat_mode = 0;
         setTimer2(0);
